@@ -7,6 +7,13 @@
 
     <h2>Name: <%= @restaurant.name %></h2>
     <h2>Address: <%= @restaurant.address %></h2>
+    <% @restaurant.reviews.each do |r| %>
+    <p>Review: <%= r.content %> </p>
+    <p>Rating: <%= r.rating %> </p>
+    <% end %>
+
+
+
     <p> <%= link_to "BACK TO MAIN PAGE", restaurants_path %> </p>
 
   </div>
